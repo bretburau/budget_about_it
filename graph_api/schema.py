@@ -5,7 +5,7 @@ from graph_api.models import Account
 class AccountType(DjangoObjectType):
   class Meta:
     model = Account
-    fields = ("id", "name", "ownder")
+    fields = ("id", "name", "owner")
 
 class Query(graphene.ObjectType):
   """
