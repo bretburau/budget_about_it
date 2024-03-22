@@ -9,11 +9,10 @@ class AccountType(DjangoObjectType):
 
 class Query(graphene.ObjectType):
   """
-  Queries for the Restaurant model
+  Queries for the Account model
   """
   accounts = graphene.List(AccountType)
-
-  def resolve_account(self, info, **kwargs):
+  def resolve_accounts(self, info, **kwargs):
     return Account.objects.all()
   
 schema = graphene.Schema(query=Query)
